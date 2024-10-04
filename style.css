@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+}
+
+:root{
+    /* ###Primary */
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+/* ### Neutral */
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+
+font-size: 15px;
+}
+
+body{
+    background-color: var(--Off-white);
+}
+
+header{
+    padding: 1.5rem 3.5rem;
+    display: flex;
+}
+
+nav{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.list a{
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+    transition: all 0.3s ease-in;
+}
+
+.list a:hover{
+    color: var(--Soft-red);
+}
+
+/* main section start here */
+main{
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
+
+.first-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+}
+
+#web-3{
+    grid-column: 2 span;
+}
+
+.first-container h1{
+    grid-column: 2/1;
+    font-size: 2.5rem;
+}
+
+.description{
+    grid-column: 2/2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup{
+    grid-row: 2 span;
+
+}
+
+.description p{
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+}
+
+.description button{
+    max-width: 220px;
+    padding: 0.9rem 2rem;
+    border: none;
+    font-size: 1.1rem; 
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--Soft-red);
+    transition: all 0.8s ease-in;
+}
+
+.description button:hover{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+
+.popup{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.popup h2{
+    color: var(--Soft-orange);
+    font-size: 2.25rem;
+}
+
+.popup-child-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.popup-child{
+    padding: 0.75rem 1rem;
+}
+
+.popup-child h3{
+    margin-bottom: 0.75rem;
+}
+
+.popup-child p{
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* second section of main element */
+
+.second-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.card{
+    max-width: 400px;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.card img{
+    height: 120px;
+}
+
+.card-detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-detail h1 span{
+    width: 100%;
+    display: flex;
+    font-size: 1.75rem;
+    color: var(--Soft-red);
+}
+
+.card-detail h1{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.card-detail p{
+    color: var(--Dark-grayish-blue);
+    transition: all 0.3s ease-in;
+}
+
+.card-detail h1:hover{
+    color: var(--Soft-red);
+}
+
+.navbar-side{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-bg{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-list{
+    position: absolute;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+}
+
+.nav-list img{
+    width: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.side-list{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.side-list a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--Dark-grayish-blue);
+    transition: all 0.3s ease-in;
+}
+
+.side-list a:hover{
+    color: var(--Soft-red);
+}
+
+@media (max-width: 1100px) {
+    .first-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .first-container h1{
+        grid-column: 2/2;
+    }
+}
+
+@media (max-width: 912px) {
+    .card{
+        margin: auto;
+    }
+    .popup-child{
+        padding: 0.2rem 0.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .first-container{
+        grid-template-columns: 1fr;
+    }
+    #web-3{
+        grid-column: auto;
+    }
+    .popup{
+        grid-column: auto;
+        grid-row-start: 5;
+    }
+    .first-container h1{
+        grid-column: auto;
+    }
+    .description{
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 670px) {
+    .list{
+        display: none;
+    }
+    .navbar-side{
+        display: flex;
+    }
+}
